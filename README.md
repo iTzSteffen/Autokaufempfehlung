@@ -1,2 +1,0 @@
-# Autokaufempfehlung
-KI Projekt

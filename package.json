@@ -1,9 +1,14 @@
 {
-    "name": "Cloud5mins",
+    "name": "Autokaufempfehlung",
     "version": "1.0.0",
     "description": "Connect to Database",
     "repository": {
         "type": "git",
-        "url": "http"
+        "url": "https://github.com/iTzSteffen/Autokaufempfehlung"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "tedious": "^2.3.1"
     }
 }

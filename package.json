@@ -1,0 +1,9 @@
+{
+    "name": "Cloud5mins",
+    "version": "1.0.0",
+    "description": "Connect to Database",
+    "repository": {
+        "type": "git",
+        "url": "http"
+    }
+}

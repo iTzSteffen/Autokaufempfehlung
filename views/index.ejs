@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
-  <head>
+<head>
     <meta charset="utf-8">
     <title>AKE</title>
   </head>
+  <style media="screen">
+    body {
+      margin: 0;
+      font-family: arial;
+    }
+
+    ul.topnav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    ul.topnav li {float: left;}
+
+    ul.topnav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+    ul.topnav li a.active {background-color: #0278DB;}
+
+    ul.topnav li.right {float: right;}
+
+    @media screen and (max-width: 600px) {
+      ul.topnav li.right,
+      ul.topnav li {float: none;}
+    }
+
+    iframe {
+      background-color: white;
+      display: block;
+      border: none;
+      min-height: 600px;
+      height: auto;
+      width: 80%;
+
+    }
+
+  </style>
   <body>
     <p>This page was rendered at <%= new Date() %>!</p>
 

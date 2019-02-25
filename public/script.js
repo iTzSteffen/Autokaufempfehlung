@@ -1,4 +1,4 @@
-document.getElementById('myButton').onclick = function(e) {
+document.getElementById('myChatbot').onclick = function(e) {
   e.preventDefault();
 
   var xhr = new XMLHttpRequest();

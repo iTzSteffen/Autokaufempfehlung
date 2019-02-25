@@ -10,6 +10,12 @@ app.set('views' ,path.resolve(__dirname,'views'));
 app.get('/', function(req, res) {
   res.render('index');
 });
+app.get('/', function(req, res) {
+  res.render('chatbot');
+});
+app.get('/', function(req, res) {
+  res.render('automodelle');
+});
 
 app.post('/add', bodyParser.json(), function(req, res){
   var a = req.body.a;

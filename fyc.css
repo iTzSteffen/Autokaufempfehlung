@@ -1,0 +1,42 @@
+.nav{
+    background-color: #666666;
+}
+
+a{
+    color: black;
+    font-size: 20pt;
+}
+
+nav{
+    background-color: #bcbcbc;
+}
+
+h1{
+    font-size: 50pt;
+
+
+    color: #ffa100;
+}
+
+.header{
+    height: 130pt;
+
+}
+.footer{
+  background-color: transparent;
+  padding-top: 750px;
+  padding-bottom: 50px;
+}
+.carlist{
+    margin-left: 10pt;
+    margin-right: 10pt;
+}
+table{
+    border: none;
+}
+
+body{
+  background-image: url(bilder/benzer.jpg);
+  background-position: center middle;
+  background-size: 100% ;
+}

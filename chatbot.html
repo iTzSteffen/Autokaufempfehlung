@@ -23,7 +23,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
-  <link rel="shortcut icon" href="ico/favicon.png" />
+  <link rel="shortcut icon" href="bilder/lupe.ico" />
 
   <!-- =======================================================
     Theme Name: Remember
@@ -120,83 +120,8 @@
       </div>
     </section>
 <br>
-  <center><h3> HIER FEHLT NOCH TEXT</h3>
+<iframe src="bot.html" style="width:100%; height:500px;"></iframe>
 
-
-
-  <div id="main">
-  	<div><img src="bilder/user.png" alt="User">Nutzer: <span id="user"></span></div>
-  	<div><img src="bilder/bot.png" alt="Bot">Bot: <span id="chatbot"></span></div>
-  	<div><input id="input" type="text" placeholder="Let me help you..." autocomplete="off"/></div>
-  </div>
-  <script type="text/javascript">
-  var trigger = [
-  	["hi","hey","hello"],
-  	["ich brauche ein neues auto", "ich brauche ein neues auto", "want a new car"],
-  	["what are you doing", "what is going on"],
-  	["maennlich", "weiblich"],
-  	["single", "verheiratet", "in einer Beziehung", "verwitwet"],
-  	["ja, eins", "ja, zwei", "ja, drei", "ja, vier", "ja, fuenf", "ja, sechs", "nein"],
-  	["abitur", "bachelor", "master", "realschule", "hauptschule"],
-  	["Informatiker", "Wirschaftsinformatiker", "Lehrer"], //noch füllen
-  	["singen", "reisen", "lesen", "schwimmen"],
-  	["pendeln"],
-  	["10.000", "15.000", "20.000"],
-  	["30000", "40000", "50000"]
-  ];
-  var reply = [
-  	["Wie kann ich dir weiterhelfen?"],
-  	["oke, du musst nun ein paar Fragen beantworten, hast du Zeit?"],
-  	["Bist du maennlich oder weiblich?"]
-  	["Was ist dein akteuller Beziehungsstatus?"],
-  	["Hast du Kinder? Wenn ja, wie viele?"],
-  	["Welchen Bildungsstand besitzt du?"],
-  	["Was ist dein Beruf?"],
-  	["Was machst du in deiner Freizeit?"],
-  	["Für was benötigst du deine neues Auto?"],
-  	["Wie viele Kilometer fährst du ca. pro Jahr?"],
-  	["Wie viel bist du bereit auszugeben bzw. wie hoch ist dein Budget?"]
-  ];
-  var alternative = ["Sry i did not understand you..."];
-  document.querySelector("#input").addEventListener("keypress", function(e){
-  	var key = e.which || e.keyCode;
-  	if(key === 13){ //Enter button
-  		var input = document.getElementById("input").value;
-  		document.getElementById("user").innerHTML = input;
-  		output(input);
-  	}
-  });
-  function output(input){
-  	try{
-  		var product = input + "=" + eval(input);
-  	} catch(e){
-  		var text = (input.toLowerCase()).replace(/[^\w\s\d]/gi, ""); //remove all chars except words, space and
-  		text = text.replace(/ a /g, " ").replace(/i feel /g, "").replace(/whats/g, "what is").replace(/please /g, "").replace(/ please/g, "");
-  		if(compare(trigger, reply, text)){
-  			var product = compare(trigger, reply, text);
-  		} else {
-  			var product = alternative[Math.floor(Math.random()*alternative.length)];
-  		}
-  	}
-  	document.getElementById("chatbot").innerHTML = product;
-  	//speak(product);
-  	document.getElementById("input").value = ""; //clear input value
-  }
-  function compare(arr, array, string){
-  	var item;
-  	for(var x=0; x<arr.length; x++){
-  		for(var y=0; y<array.length; y++){
-  			if(arr[x][y] == string){
-  				items = array[x];
-  				item =  items[Math.floor(Math.random()*items.length)];
-  			}
-  		}
-  	}
-  	return item;
-  }
-
-  </script>
-</center>
 
         <footer>
           <div class="container">

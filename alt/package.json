@@ -1,27 +1,17 @@
 {
-  "name": "autokaufempfehlung",
+  "name": "pokemon",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "async": "^2.6.2",
-    "body-parser": "^1.18.3",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "tedious": "^5.0.3"
-  },
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iTzSteffen/Autokaufempfehlung.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iTzSteffen/Autokaufempfehlung/issues"
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1"
   },
-  "homepage": "https://github.com/iTzSteffen/Autokaufempfehlung#readme"
+  "devDependencies": {},
+  "description": ""
 }

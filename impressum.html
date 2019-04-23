@@ -1,123 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>FindYourCar</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="icon" type="icon" href="bilder/icons/benz.ico">
-  <style>
-  body{
-    background-image: url(bilder/benzer.jpg);
-    background-position: center middle;
-    background-size: 100% ;
-    padding-bottom: 0px;
-  }
-  table {
-    font-family: arial, sans-serif;
-    border: none;
-    border-collapse: collapse;
-    width: 100px;
-  }
+  <title>FindYourCar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bot that helps you finding your dream car." />
+  <meta name="Alessandro, Niklase, Lars, Steffen" content="" />
 
-  .footer{
-    position:static;
-    padding: 20px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  <!-- css -->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettyPhoto.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
-  td, th {
-    border: none;
-    text-align: left;
-    padding: 8px;
-  }
+  <!-- Theme skin -->
+  <link id="t-colors" href="color/default.css" rel="stylesheet" />
 
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-</style>
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
 
+  <!-- =======================================================
+    Theme Name: Remember
+    Theme URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark .navbar-fixed-top">
-    <a class="navbar-brand" href="index.html"><img src="bilder/icons/benz_logo.png" alt="benz_logo" height="30px" width="30px">  FindYourCar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="chatbot.html">Chatbot</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="modelle.html">Modelle</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="impressum.html">Impressum</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="wrapper">
+    <!-- start header -->
+    <header>
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <ul class="topmenu">
+                <li><a href="#">Home</a> &#47;</li>
+                <li><a href="#">Terms</a> &#47;</li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <div class="span6">
+
+              <ul class="social-network">
+                <li><a href="https://www.facebook.com/MercedesBenz/Facebook" data-placement="bottom" title="Facebook"><i class="icon-circled icon-bglight icon-facebook"></i></a></li>
+                <li><a href="https://twitter.com/MercedesBenz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" data-placement="bottom" title="Twitter"><i class="icon-circled icon-bglight icon-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/mercedesbenz/?hl=en" data-placement="bottom" title="Instagram"><i class="icon-circled icon-instagram icon-bglight"></i></a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
 
 
-<div class="carlist">
+        <div class="row nomargin">
+          <div class="span4">
+            <div class="logo">
+              <h1><a href="index.html"><i class="icon-search"></i> FindYourCar</a></h1>
+            </div>
+          </div>
+          <div class="span8">
+            <div class="navbar navbar-static-top">
+              <div class="navigation">
+                <nav>
+                  <ul class="nav topnav">
+                    <li class="active">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">Chatbot <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="howto.html">How To Use the Bot</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
 
-  <p>
-    Macher:.... <br>
-    ___<br>
-    ___<br>
-    ___<br>
-    ___<br>
-    ___<br>
-  </p>
-  <br>
-  <h2>Disclaimer</h2>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="modelle.html">Models </a>
 
-  <h3>1. Warnhinweis zu Inhalten</h3>
+                    </li>
+                    <li>
+                      <a href="impressum.html">Contact </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- end navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <section id="inner-headline">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="inner-heading">
+              <h2>Get in touch</h2>
+            </div>
+          </div>
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+              <li class="active">Contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>Die kostenlosen und frei zugänglichen Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Der Anbieter dieser Webseite übernimmt jedoch keine Gewähr für die Richtigkeit und Aktualität der bereitgestellten kostenlosen und frei zugänglichen journalistischen Ratgeber und Nachrichten. Die Nutzung dieser Webseiteninhalte erfolgt auf eigene Gefahr. Allein durch den Aufruf dieser kostenlosen und frei zugänglichen Inhalte kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und dem Anbieter zustande, insoweit fehlt es am Rechtsbindungswillen des Anbieters.</p>
-
-  <h3>2. Verlinkungen</h3>
-
-  <p>Die Webseite enthält Verlinkungen zu anderen Webseiten ("externe Links"). Diese Webseiten unterliegen der Haftung der jeweiligen Seitenbetreiber. Bei Verknüpfung der externen Links waren keine Rechtsverstöße ersichtlich. Auf die aktuelle und künftige Gestaltung der verlinkten Seiten hat der Anbieter keinen Einfluss. Die permanente Überprüfung der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Bekanntwerden von Rechtsverstößen werden die betroffenen externen Links unverzüglich gelöscht.</p>
-
-  <h3>3. Urheberrecht / Leistungsschutzrecht</h3>
-
-  <p>Die auf dieser Webseite durch den Anbieter veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht und Leistungsschutzrecht. Alle vom deutschen Urheber- und Leistungsschutzrecht nicht zugelassene Verwertung bedarf der vorherigen schriftlichen Zustimmung des Anbieters oder jeweiligen Rechteinhabers. Dies gilt vor allem für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Dabei sind Inhalte und Rechte Dritter als solche gekennzeichnet. Das unerlaubte Kopieren der Webseiteninhalte oder der kompletten Webseite ist nicht gestattet und strafbar. Lediglich die Herstellung von Kopien und Downloads für den persönlichen, privaten und nicht kommerziellen Gebrauch ist erlaubt.</p>
-  <p>Diese Website darf ohne schriftliche Erlaubnis nicht durch Dritte in Frames oder iFrames dargestellt werden.</p>
-
-  <h3>4. Keine Werbung</h3>
-
-  <p>Die Verwendung der Kontaktdaten des Impressums zur gewerblichen Werbung ist ausdrücklich nicht erwünscht, es sei denn der Anbieter hatte zuvor seine schriftliche Einwilligung erteilt oder es besteht bereits eine Geschäftsbeziehung. Der Anbieter und alle auf dieser Website genannten Personen widersprechen hiermit jeder kommerziellen Verwendung und Weitergabe ihrer Daten.</p>
-
-  <h3>5. Besondere Nutzungsbedingungen</h3>
-  <p>Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorgenannten Nummern 1. bis 4. abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im jeweiligen Einzelfall die besonderen Bedingungen.</p>
-
-  Quelle: <a href="https://www.fachanwalt.de/disclaimer-vorlage/">Disclaimer Vorlage von fachanwalt.de</a>
-  <br>
-</div>
-
-<div class="jumbotron text-center footer" style="margin-bottom:0">
-  <p>Mercedes-Benz visit @  </p>
-  <center>
-  <table>
-    <tr>
-      <th><a href="https://www.mercedes-benz.de/"><img src="bilder/icons/benz_logo.png" alt="benz_logo" height="50px" width="50px"></th>
-      <th><a href="https://www.facebook.com/MercedesBenz/Facebook"><img src="bilder/icons/fb_logo.png" alt="fb_logo" height="50px" width="50px"></th>
-      <th><a href="https://www.instagram.com/mercedesbenz/?hl=en"><img src="bilder/icons/insta_logo.png" alt="insta_logo" height="50px" width="50px"></th>
-      <th><a href="https://twitter.com/MercedesBenz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="bilder/icons/twitter_logo.svg " alt="twitter_logo" height="50px" width="50px"></th>
-    </tr>
-  </table>
-</center>
-</div>
+    <section id="content">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2592.5468398443177!2d8.531991816118698!3d49.474176579352694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797cf239c421e4b%3A0xb0a0a8f3f2f20fff!2sCoblitzallee%2C+68163+Mannheim!5e0!3m2!1sen!2sde!4v1556028711872!5m2!1sen!2sde" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <h4>Get in touch with us by filling contact form below</h4>
 
 
 
+            <form id="contactform" action="" method="post" role="form" class="contactForm">
 
-</body>
-</html>
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+
+              <div class="row">
+                <div class="span4 field form-group">
+                  <input type="text" name="name" placeholder="* Enter your full name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="span4 field form-group">
+                  <input type="text" name="email" placeholder="* Enter your email address" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="span8 margintop10 field form-group">
+                  <input type="text" name="subject" placeholder="Enter your subject" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="span8 margintop10 field form-group">
+                  <textarea rows="12" name="message" class="input-block-level" placeholder="* Your message here..." data-rule="required" data-msg="Please write something"></textarea>
+                  <div class="validation"></div>
+
+                  <p>
+                    <button class="btn btn-color margintop10 pull-left" type="submit">Send message</button>
+                    <span class="pull-right margintop20">* Please fill all required form field, thanks!</span>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="span4">
+            <div class="clearfix"></div>
+            <aside class="right-sidebar">
+
+              <div class="widget">
+                <h5 class="widgetheading">Contact information<span></span></h5>
+
+                <ul class="contact-info">
+                  <li><label>Address :</label> Coblitzallee 1-9, 68163 Mannheim <br /> Germany</li>
+                  <li><label>Phone :</label>+62 123 456 78 / +62 123 456 79</li>
+                  <li><label>Fax : </label>+62 123 456 10 / +62 123 456 11</li>
+                  <li><label>Email : </label> info@findyourcar.com</li>
+                </ul>
+
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="span4">
+                <div class="widget">
+                  <div class="footer_logo">
+                    <h3><a href="index.html"><i class="icon-search"></i> FindYourCar</a></h3>
+                  </div>
+                  <address>
+    							  <strong>FindYourCar company Inc.</strong><br>
+      							Coblitzallee 1-9<br>
+      							68163 Mannheim, Germany
+      						</address>
+                  <p>
+                    <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
+                    <i class="icon-envelope-alt"></i> contact@findyourcar.com
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div id="sub-footer">
+            <div class="container">
+              <div class="row">
+                <div class="span6">
+                  <div class="copyright">
+                    <p><span>&copy; FindYourCar Inc. All right reserved</span></p>
+                  </div>
+
+                </div>
+
+                <div class="span6">
+                  <div class="credits">
+                    <!--
+                      All the links in the footer should remain intact.
+                      You can delete the links only if you purchased the pro version.
+                      Licensing information: https://bootstrapmade.com/license/
+                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Remember
+                    -->
+                    In Cooperation with <a href="https://www.mercedes-benz.de/">MercedesBenz</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <a href="#" class="scrollup"><i class="icon-angle-up icon-rounded icon-bglight icon-2x"></i></a>
+
+      <!-- javascript
+        ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/modernizr.custom.js"></script>
+      <script src="js/toucheffects.js"></script>
+      <script src="js/google-code-prettify/prettify.js"></script>
+      <script src="js/jquery.prettyPhoto.js"></script>
+      <script src="js/portfolio/jquery.quicksand.js"></script>
+      <script src="js/portfolio/setting.js"></script>
+      <script src="js/animate.js"></script>
+
+      <!-- Template Custom JavaScript File -->
+      <script src="js/custom.js"></script>
+
+    </body>
+
+    </html>

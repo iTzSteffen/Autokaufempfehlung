@@ -1,225 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>FindYourCar</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="icon" type="icon" href="bilder/icons/benz.ico">
-  <style>
-  body{
-    background-image: url(bilder/benzer.jpg);
-    background-position: center middle;
-    background-size: 100% ;
-    padding-bottom: 0px;
-  }
-  table {
-    font-family: arial, sans-serif;
-    border: none;
-    border-collapse: collapse;
-    width: 100px;
-  }
+  <title>FindYourCar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bot that helps you finding your dream car." />
+  <meta name="Alessandro, Niklase, Lars, Steffen" content="" />
 
-  .footer{
-    position:static;
-    padding: 20px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  <!-- css -->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettyPhoto.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
-  td, th {
-    border: none;
-    text-align: left;
-    padding: 8px;
-  }
+  <!-- Theme skin -->
+  <link id="t-colors" href="color/default.css" rel="stylesheet" />
 
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  .card {
-    border: none;
-  }
-</style>
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
 
+
+  <!-- =======================================================
+    Theme Name: Remember
+    Theme URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark .navbar-fixed-top">
-    <a class="navbar-brand" href="index.html"><img src="bilder/icons/benz_logo.png" alt="benz_logo" height="30px" width="30px">  FindYourCar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="chatbot.html">Chatbot</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="modelle.html">Modelle</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="impressum.html">Impressum</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="wrapper">
+    <!-- start header -->
+    <header>
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <ul class="topmenu">
+                <li><a href="#">Home</a> &#47;</li>
+                <li><a href="#">Terms</a> &#47;</li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <div class="span6">
 
+              <ul class="social-network">
+                <li><a href="https://www.facebook.com/MercedesBenz/Facebook" data-placement="bottom" title="Facebook"><i class="icon-circled icon-bglight icon-facebook"></i></a></li>
+                <li><a href="https://twitter.com/MercedesBenz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" data-placement="bottom" title="Twitter"><i class="icon-circled icon-bglight icon-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/mercedesbenz/?hl=en" data-placement="bottom" title="Instagram"><i class="icon-circled icon-instagram icon-bglight"></i></a></li>
+              </ul>
 
-<div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/a_klasse.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">A-Klasse</h5>
-        <p class="card-text">...</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/a-class/hatchback/explore.html</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/amg_gt.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">AMG-GT</h5>
-        <p class="card-text">...</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/amg-gt/4-door-coupe/explore.html</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/b_klasse.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">B-Klasse</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/b-class/hatchback/explore.html</small></p>
-      </div>
-    </div>
-  </div>
-<br>
-  <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="bilder/modelle/c_klasse.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">C-Klasse</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/c-class/saloon/inspiration.html</small></p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="bilder/modelle/cla.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">CLA-Klasse</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/cla/coupe/explore.html</small></p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="bilder/modelle/cls.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">CLS-Klasse</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/cls/coupe/explore.html</small></p>
-        </div>
-      </div>
-    </div>
-<br>
-    <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="bilder/modelle/e_klasse.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">E-Klasse</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/e-class/e-class-saloon/explore.html</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="bilder/modelle/g_klasse.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">G-Klasse</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/g-class/suv/explore.html</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="bilder/modelle/gla.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">GLA-Klasse</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/gla/gla-suv/explore.html</small></p>
+            </div>
           </div>
         </div>
       </div>
-<br>
-<div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/glc.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">GLC-Klasse</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/glc/glc-suv/explore.html</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/glk.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">GLK-Klasse</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/gls/gls-suv/explore.html</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/s_klasse.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">S-Klasse</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/s-class/coupe/explore.html</small></p>
-      </div>
-    </div>
-  </div>
-<br>
-<div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/slc.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">SLC-Klasse</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/slc/slc-roadster/explore.html</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/v_klasse.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">V-Klasse</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/v-class/v-class-mpv-fl/explore.html</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="bilder/modelle/x_klasse.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">X-Klasse</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/x-class/x-class-pickup/explore.html</small></p>
-      </div>
-    </div>
-  </div>
-  <br><br>
-
-<div class="jumbotron text-center footer" style="margin-bottom:0">
-  <p>Mercedes-Benz visit @  </p>
-  <center>
-  <table>
-    <tr>
-      <th><a href="https://www.mercedes-benz.de/"><img src="bilder/icons/benz_logo.png" alt="benz_logo" height="50px" width="50px"></th>
-      <th><a href="https://www.facebook.com/MercedesBenz/Facebook"><img src="bilder/icons/fb_logo.png" alt="fb_logo" height="50px" width="50px"></th>
-      <th><a href="https://www.instagram.com/mercedesbenz/?hl=en"><img src="bilder/icons/insta_logo.png" alt="insta_logo" height="50px" width="50px"></th>
-      <th><a href="https://twitter.com/MercedesBenz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="bilder/icons/twitter_logo.svg " alt="twitter_logo" height="50px" width="50px"></th>
-    </tr>
-  </table>
-</center>
-</div>
+      <div class="container">
 
 
+        <div class="row nomargin">
+          <div class="span4">
+            <div class="logo">
+              <h1><a href="index.html"><i class="icon-search"></i> FindYourCar</a></h1>
+            </div>
+          </div>
+          <div class="span8">
+            <div class="navbar navbar-static-top">
+              <div class="navigation">
+                <nav>
+                  <ul class="nav topnav">
+                    <li class="active">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">Chatbot <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="howto.html">How To Use the Bot</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="modelle.html">Models </a>
+
+                    </li>
+                    <li>
+                      <a href="impressum.html">Contact </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- end navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <section id="inner-headline">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="inner-heading">
+              <h2>The models we provide</h2>
+            </div>
+          </div>
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+              <li class="active">Models</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h3></h3>
+            <div class="row">
+
+              <div class="grid cs-style-3">
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/a_klasse.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>A-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/a_klasse.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/amg_gt.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>AMG GT</h3>
+                        <p>
+                          <a href="img/dummies/works/amg_gt.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/b_klasse.png" alt=""></div>
+                      <figcaption>
+                        <h3>B-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/b_klasse.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                </div>
+                <div class="grid cs-style-3">
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/cla.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>CLA</h3>
+                        <p>
+                          <a href="img/dummies/works/cla.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/cls.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>CLS</h3>
+                        <p>
+                          <a href="img/dummies/works/cls.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/e_klasse.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>E-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/e_klasse.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/g_klasse.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>G-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/g_klasse.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
 
 
-</body>
-</html>
+
+              <div class="grid cs-style-3">
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/gla.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>GLA</h3>
+                        <p>
+                          <a href="img/dummies/works/gla.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/glc.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>GLC</h3>
+                        <p>
+                          <a href="img/dummies/works/glc.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/glk.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>GLK</h3>
+                        <p>
+                          <a href="img/dummies/works/glk.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/s_klasse.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>S-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/s_klasse.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/slc.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>SLC</h3>
+                        <p>
+                          <a href="img/dummies/works/slc.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/v_klasse.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>V-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/v_klasse.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/x_klasse.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>X-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/x_klasse.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="item">
+                    <figure>
+                      <div><img src="img/dummies/works/c_klasse.jpg" alt=""></div>
+                      <figcaption>
+                        <h3>C-Klasse</h3>
+                        <p>
+                          <a href="img/dummies/works/c_klasse.jpg" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-zoom-in icon-circled icon-bglight icon-2x active"></i></a>
+                          <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x active"></i></a>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="span4">
+                <div class="widget">
+                  <div class="footer_logo">
+                    <h3><a href="index.html"><i class="icon-search"></i> FindYourCar</a></h3>
+                  </div>
+                  <address>
+    							  <strong>FindYourCar company Inc.</strong><br>
+      							Coblitzallee 1-9<br>
+      							68163 Mannheim, Germany
+      						</address>
+                  <p>
+                    <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
+                    <i class="icon-envelope-alt"></i> contact@findyourcar.com
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div id="sub-footer">
+            <div class="container">
+              <div class="row">
+                <div class="span6">
+                  <div class="copyright">
+                    <p><span>&copy; FindYourCar Inc. All right reserved</span></p>
+                  </div>
+
+                </div>
+
+                <div class="span6">
+                  <div class="credits">
+                    <!--
+                      All the links in the footer should remain intact.
+                      You can delete the links only if you purchased the pro version.
+                      Licensing information: https://bootstrapmade.com/license/
+                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Remember
+                    -->
+                    In Cooperation with <a href="https://www.mercedes-benz.de/">MercedesBenz</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <a href="#" class="scrollup"><i class="icon-angle-up icon-rounded icon-bglight icon-2x"></i></a>
+
+      <!-- javascript
+        ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/modernizr.custom.js"></script>
+      <script src="js/toucheffects.js"></script>
+      <script src="js/google-code-prettify/prettify.js"></script>
+      <script src="js/jquery.prettyPhoto.js"></script>
+      <script src="js/portfolio/jquery.quicksand.js"></script>
+      <script src="js/portfolio/setting.js"></script>
+      <script src="js/animate.js"></script>
+
+      <!-- Template Custom JavaScript File -->
+      <script src="js/custom.js"></script>
+
+    </body>
+
+    </html>

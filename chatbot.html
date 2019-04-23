@@ -1,110 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>FindYourCar</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="icon" type="icon" href="bilder/icons/benz.ico">
-  <style>
-  body{
-    background-color: #A4A4A4;
+  <title>FindYourCar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bot that helps you finding your dream car." />
+  <meta name="Alessandro, Niklase, Lars, Steffen" content="" />
 
-    padding-bottom: 0px;
-    color: white;
-  }
-  table {
-    font-family: arial, sans-serif;
-    border: none;
-    border-collapse: collapse;
-    width: 100px;
-  }
+  <!-- css -->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/prettyPhoto.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
-  .footer{
-    position:static;
-    padding: 20px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .pfeil {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 220px;
-  }
-  p{
-    align: center;
-  }
+  <!-- Theme skin -->
+  <link id="t-colors" href="color/default.css" rel="stylesheet" />
 
-  td, th {
-    border: none;
-    text-align: left;
-    padding: 8px;
-  }
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
 
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-
-  </style>
-
+  <!-- =======================================================
+    Theme Name: Remember
+    Theme URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
 </head>
+
 <body>
+  <div id="wrapper">
+    <!-- start header -->
+    <header>
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <ul class="topmenu">
+                <li><a href="#">Home</a> &#47;</li>
+                <li><a href="#">Terms</a> &#47;</li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <div class="span6">
 
-  <nav class="navbar navbar-expand-sm navbar-dark .navbar-fixed-top">
-    <a class="navbar-brand" href="index.html"><img src="bilder/icons/benz_logo.png" alt="benz_logo" height="30px" width="30px">  FindYourCar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="chatbot.html">Chatbot</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="modelle.html">Modelle</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="impressum.html">Impressum</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<img class="wallpaper" src="bilder/benzer.jpg" alt="background">
+              <ul class="social-network">
+                <li><a href="https://www.facebook.com/MercedesBenz/Facebook" data-placement="bottom" title="Facebook"><i class="icon-circled icon-bglight icon-facebook"></i></a></li>
+                <li><a href="https://twitter.com/MercedesBenz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" data-placement="bottom" title="Twitter"><i class="icon-circled icon-bglight icon-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/mercedesbenz/?hl=en" data-placement="bottom" title="Instagram"><i class="icon-circled icon-instagram icon-bglight"></i></a></li>
+              </ul>
 
-<p>Wie funktionert der Bot?</p>
-<div class="pfeil">
-  <img src="bilder/pfeil.png" alt="pfeil" height="200" width="250">
-</div>
-<div class="jumbotron dark text-center footer" style="margin-bottom:0">
-  <p>Mercedes-Benz visit @  </p>
-  <center>
-  <table>
-    <tr>
-      <th><a href="https://www.mercedes-benz.de/"><img src="bilder/icons/benz_logo.png" alt="benz_logo" height="50px" width="50px"></th>
-      <th><a href="https://www.facebook.com/MercedesBenz/Facebook"><img src="bilder/icons/fb_logo.png" alt="fb_logo" height="50px" width="50px"></th>
-      <th><a href="https://www.instagram.com/mercedesbenz/?hl=en"><img src="bilder/icons/insta_logo.png" alt="insta_logo" height="50px" width="50px"></th>
-      <th><a href="https://twitter.com/MercedesBenz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="bilder/icons/twitter_logo.svg " alt="twitter_logo" height="50px" width="50px"></th>
-    </tr>
-  </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+
+        <div class="row nomargin">
+          <div class="span4">
+            <div class="logo">
+              <h1><a href="index.html"><i class="icon-search"></i> FindYourCar</a></h1>
+            </div>
+          </div>
+          <div class="span8">
+            <div class="navbar navbar-static-top">
+              <div class="navigation">
+                <nav>
+                  <ul class="nav topnav">
+                    <li class="active">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">Chatbot <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="howto.html">How To Use the Bot</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="modelle.html">Models </a>
+
+                    </li>
+                    <li>
+                      <a href="impressum.html">Contact </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- end navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <section id="inner-headline">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="inner-heading">
+              <h2>How do you use the Chatbot? <i class="icon-search"></i></h2>
+            </div>
+          </div>
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+              <li><a href="chatbot.html">Chatbot</a> <i class="icon-angle-right"></i></li>
+              <li class="active">Chatbot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+<br>
+  <center><h3> HIER FEHLT NOCH TEXT</h3>
+
+
+
+  <div id="main">
+  	<div><img src="user.png" alt="User">Nutzer: <span id="user"></span></div>
+  	<div><img src="bot.png" alt="Bot">Bot: <span id="chatbot"></span></div>
+  	<div><input id="input" type="text" placeholder="Let me help you..." autocomplete="off"/></div>
+  </div>
+  <script type="text/javascript">
+  var trigger = [
+  	["hi","hey","hello"],
+  	["ich brauche ein neues auto", "ich brauche ein neues auto", "want a new car"],
+  	["what are you doing", "what is going on"],
+  	["maennlich", "weiblich"],
+  	["single", "verheiratet", "in einer Beziehung", "verwitwet"],
+  	["ja, eins", "ja, zwei", "ja, drei", "ja, vier", "ja, fuenf", "ja, sechs", "nein"],
+  	["abitur", "bachelor", "master", "realschule", "hauptschule"],
+  	["Informatiker", "Wirschaftsinformatiker", "Lehrer"], //noch füllen
+  	["singen", "reisen", "lesen", "schwimmen"],
+  	["pendeln"],
+  	["10.000", "15.000", "20.000"],
+  	["30000", "40000", "50000"]
+  ];
+  var reply = [
+  	["Wie kann ich dir weiterhelfen?"],
+  	["oke, du musst nun ein paar Fragen beantworten, hast du Zeit?"],
+  	["Bist du maennlich oder weiblich?"]
+  	["Was ist dein akteuller Beziehungsstatus?"],
+  	["Hast du Kinder? Wenn ja, wie viele?"],
+  	["Welchen Bildungsstand besitzt du?"],
+  	["Was ist dein Beruf?"],
+  	["Was machst du in deiner Freizeit?"],
+  	["Für was benötigst du deine neues Auto?"],
+  	["Wie viele Kilometer fährst du ca. pro Jahr?"],
+  	["Wie viel bist du bereit auszugeben bzw. wie hoch ist dein Budget?"]
+  ];
+  var alternative = ["Sry i did not understand you..."];
+  document.querySelector("#input").addEventListener("keypress", function(e){
+  	var key = e.which || e.keyCode;
+  	if(key === 13){ //Enter button
+  		var input = document.getElementById("input").value;
+  		document.getElementById("user").innerHTML = input;
+  		output(input);
+  	}
+  });
+  function output(input){
+  	try{
+  		var product = input + "=" + eval(input);
+  	} catch(e){
+  		var text = (input.toLowerCase()).replace(/[^\w\s\d]/gi, ""); //remove all chars except words, space and
+  		text = text.replace(/ a /g, " ").replace(/i feel /g, "").replace(/whats/g, "what is").replace(/please /g, "").replace(/ please/g, "");
+  		if(compare(trigger, reply, text)){
+  			var product = compare(trigger, reply, text);
+  		} else {
+  			var product = alternative[Math.floor(Math.random()*alternative.length)];
+  		}
+  	}
+  	document.getElementById("chatbot").innerHTML = product;
+  	//speak(product);
+  	document.getElementById("input").value = ""; //clear input value
+  }
+  function compare(arr, array, string){
+  	var item;
+  	for(var x=0; x<arr.length; x++){
+  		for(var y=0; y<array.length; y++){
+  			if(arr[x][y] == string){
+  				items = array[x];
+  				item =  items[Math.floor(Math.random()*items.length)];
+  			}
+  		}
+  	}
+  	return item;
+  }
+
+  </script>
 </center>
-</div>
 
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="span4">
+                <div class="widget">
+                  <div class="footer_logo">
+                    <h3><a href="index.html"><i class="icon-search"></i> FindYourCar</a></h3>
+                  </div>
+                  <address>
+    							  <strong>FindYourCar company Inc.</strong><br>
+      							Coblitzallee 1-9<br>
+      							68163 Mannheim, Germany
+      						</address>
+                  <p>
+                    <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
+                    <i class="icon-envelope-alt"></i> contact@findyourcar.com
+                  </p>
+                </div>
+              </div>
 
+            </div>
+          </div>
+          <div id="sub-footer">
+            <div class="container">
+              <div class="row">
+                <div class="span6">
+                  <div class="copyright">
+                    <p><span>&copy; FindYourCar Inc. All right reserved</span></p>
+                  </div>
 
+                </div>
 
+                <div class="span6">
+                  <div class="credits">
+                    <!--
+                      All the links in the footer should remain intact.
+                      You can delete the links only if you purchased the pro version.
+                      Licensing information: https://bootstrapmade.com/license/
+                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Remember
+                    -->
+                    In Cooperation with <a href="https://www.mercedes-benz.de/">MercedesBenz</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <a href="#" class="scrollup"><i class="icon-angle-up icon-rounded icon-bglight icon-2x"></i></a>
 
+      <!-- javascript
+        ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/modernizr.custom.js"></script>
+      <script src="js/toucheffects.js"></script>
+      <script src="js/google-code-prettify/prettify.js"></script>
+      <script src="js/jquery.prettyPhoto.js"></script>
+      <script src="js/portfolio/jquery.quicksand.js"></script>
+      <script src="js/portfolio/setting.js"></script>
+      <script src="js/animate.js"></script>
 
-<script src="https://cdn.cai.tools.sap/webchat/webchat.js"
-channelId="931bc9ae-885f-4a64-8e98-9a4a3cce9022"
-token="fd192ee716c3bbd6e6b2249e1ce84eec"
-id="cai-webchat"
-></script>
-<meta name="viewport" content="width=device-width">
+      <!-- Template Custom JavaScript File -->
+      <script src="js/custom.js"></script>
 
-</body>
-</html>
+    </body>
+
+    </html>

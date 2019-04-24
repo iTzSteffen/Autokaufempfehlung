@@ -17,21 +17,19 @@
   var trigger = [
   	["hi","hey","hello"],
   	["ich brauche ein neues auto", "ich brauche ein neues auto", "want a new car"],
-  	["ja", "jap", "na klar"],
   	["maennlich", "weiblich"],
   	["single", "verheiratet", "in einer Beziehung", "verwitwet"],
-  	["ja, eins", "ja, zwei", "ja, drei", "ja, vier", "ja, fuenf", "ja, sechs", "nein"],
+  	["ja eins", "ja zwei", "ja drei", "ja vier", "ja fuenf", "ja sechs", "nein"],
   	["abitur", "bachelor", "master", "realschule", "hauptschule"],
-  	["Informatiker", "Wirschaftsinformatiker", "Lehrer"], //noch füllen
+  	["informatiker", "wirtschaftsinformatiker", "lehrer"], //noch füllen
   	["singen", "reisen", "lesen", "schwimmen"],
   	["pendeln"],
-  	["10.000", "15.000", "20.000"],
+  	["10000", "15000", "20000"],
   	["30000", "40000", "50000"]
   ];
   var reply = [
   	["Wie kann ich dir weiterhelfen?"],
-  	["oke, du musst nun ein paar Fragen beantworten, hast du Zeit?"],
-  	["Bist du maennlich oder weiblich?"]
+  	["oke, bist du maennlich oder weiblich?"],
   	["Was ist dein akteuller Beziehungsstatus?"],
   	["Hast du Kinder? Wenn ja, wie viele?"],
   	["Welchen Bildungsstand besitzt du?"],
@@ -41,7 +39,7 @@
   	["Wie viele Kilometer fährst du ca. pro Jahr?"],
   	["Wie viel bist du bereit auszugeben bzw. wie hoch ist dein Budget?"]
   ];
-  var alternative = ["Sry i did not understand you..."];
+  var alternative = ["Habe dich leider nicht verstanden..."];
   document.querySelector("#input").addEventListener("keypress", function(e){
   	var key = e.which || e.keyCode;
   	if(key === 13){ //Enter button

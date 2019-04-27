@@ -360,35 +360,107 @@ app.post('/create_car_prediction', (req, res) => {
   });
 
 
-  var request = require('request');
-  var responseLars;
+//   Alter Versuch mit mehreren Servern
+//
+//   var request = require('request');
+//   var responseLars;
+//
+// Http Call POST - ich schick was hin
+//   request.post(
+//       'http://localhost:8080/',
+//       { json: {
+//           geschlecht: obj.geschlecht,
+//           alter: obj.alter,
+//        } },
+//       function (error, response, body) {
+//           if (!error && response.statusCode == 200) {
+//               console.log(body);
+//               responseLars = body;
+//               res.send({
+//                 replies: [{
+//                   type: 'text',
+//                   content: 'responseLars',
+//                 }],
+//                 conversation: {
+//                   memory: { key: 'value' }
+//                 }
+//               })
+//           }
+//       }
+//   );
+//  const fs = require('fs')
+  var data;
+  var response;
 
-//Http Call POST - ich schick was hin
-  request.post(
-      'http://localhost:8080/',
-      { json: {
-          geschlecht: obj.geschlecht,
-          alter: obj.alter,
-       } },
-      function (error, response, body) {
-          if (!error && response.statusCode == 200) {
-              console.log(body);
-              responseLars = body;
-              res.send({
-                replies: [{
-                  type: 'text',
-                  content: 'responseLars',
-                }],
-                conversation: {
-                  memory: { key: 'value' }
-                }
-              })
-          }
-      }
-  );
+  try {
+    data = fs.readFileSync('Netzoutput.json', 'utf8')
 
+    console.log(data)
+    switch (data) {
+      case 0:
+        response = 'A-Klasse';
+        break;
+      case 1:
+        response = 'AMG-GT';
+        break;
+      case 2:
+        response = 'B-Klasse';
+        break;
+      case 3:
+        response = 'C-Klasse';
+        break;
+      case 4:
+        response = 'CLA-Klasse';
+        break;
+      case 5:
+        response = 'CLS-Klasse';
+        break;
+      case 6:
+        response = 'E-Klasse';
+        break;
+      case 7:
+        response = 'G-Klasse';
+        break;
+      case 8:
+        response = 'GLA-Klasse';
+        break;
+      case 9:
+        response = 'GLC-Klasse';
+        break;
+      case 10:
+        response = 'GLK-Klasse';
+        break;
+      case 11:
+        response = 'S-Klasse';
+        break;
+      case 12:
+        response = 'SLC-Klasse';
+        break;
+      case 13:
+        response = 'V-Klasse';
+        break;
+      case 14:
+        response = 'X-Klasse';
+        break;
 
+      default: response = "default"}
+
+  } catch (err) {
+    console.error(err)
+  }
+
+  res.send({
+    replies: [{
+      type: 'text',
+      content: response,
+    }],
+    conversation: {
+      memory: { key: 'value' }
+    }
+  })
 })
+
+
 
 // const fs = require('fs')
 // fs.readFile('pythonserver/netzoutput/netzoutput.json', (err, data) => {

@@ -357,6 +357,77 @@ app.post('/create_car_prediction', (req, res) => {
     if (err) throw err;
     console.log('finished');
     console.log(results);
+
+    var data;
+    var response;
+
+    try {
+      data = fs.readFileSync('Netzoutput.json', 'utf8');
+      data = JSON.parse(data);
+      console.log(data.ergebnis);
+      switch (data.ergebnis) {
+        case 0:
+          response = 'Das beste Auto für dich wäre: A-Klasse';
+          break;
+        case 1:
+          response = 'Das beste Auto für dich wäre: AMG-GT';
+          break;
+        case 2:
+          response = 'Das beste Auto für dich wäre: B-Klasse';
+          break;
+        case 3:
+          response = 'Das beste Auto für dich wäre: C-Klasse';
+          break;
+        case 4:
+          response = 'Das beste Auto für dich wäre: CLA-Klasse';
+          break;
+        case 5:
+          response = 'Das beste Auto für dich wäre: CLS-Klasse';
+          break;
+        case 6:
+          response = 'Das beste Auto für dich wäre: E-Klasse';
+          break;
+        case 7:
+          response = 'Das beste Auto für dich wäre: G-Klasse';
+          break;
+        case 8:
+          response = 'Das beste Auto für dich wäre: GLA-Klasse';
+          break;
+        case 9:
+          response = 'Das beste Auto für dich wäre: GLC-Klasse';
+          break;
+        case 10:
+          response = 'Das beste Auto für dich wäre: GLK-Klasse';
+          break;
+        case 11:
+          response = 'Das beste Auto für dich wäre: S-Klasse';
+          break;
+        case 12:
+          response = 'Das beste Auto für dich wäre: SLC-Klasse';
+          break;
+        case 13:
+          response = 'Das beste Auto für dich wäre: V-Klasse';
+          break;
+        case 14:
+          response = 'Das beste Auto für dich wäre: X-Klasse';
+          break;
+
+        default: response = "default"}
+
+    } catch (err) {
+      console.error(err)
+    }
+
+    res.send({
+      replies: [{
+        type: 'text',
+        content: response,
+      }],
+      conversation: {
+        memory: { key: 'value' }
+      }
+    })
+
   });
 
 
@@ -389,89 +460,9 @@ app.post('/create_car_prediction', (req, res) => {
 //       }
 //   );
 //  const fs = require('fs')
-  var data;
-  var response;
 
-  try {
-    data = fs.readFileSync('Netzoutput.json', 'utf8')
 
-    console.log(data)
-    switch (data) {
-      case 0:
-        response = 'A-Klasse';
-        break;
-      case 1:
-        response = 'AMG-GT';
-        break;
-      case 2:
-        response = 'B-Klasse';
-        break;
-      case 3:
-        response = 'C-Klasse';
-        break;
-      case 4:
-        response = 'CLA-Klasse';
-        break;
-      case 5:
-        response = 'CLS-Klasse';
-        break;
-      case 6:
-        response = 'E-Klasse';
-        break;
-      case 7:
-        response = 'G-Klasse';
-        break;
-      case 8:
-        response = 'GLA-Klasse';
-        break;
-      case 9:
-        response = 'GLC-Klasse';
-        break;
-      case 10:
-        response = 'GLK-Klasse';
-        break;
-      case 11:
-        response = 'S-Klasse';
-        break;
-      case 12:
-        response = 'SLC-Klasse';
-        break;
-      case 13:
-        response = 'V-Klasse';
-        break;
-      case 14:
-        response = 'X-Klasse';
-        break;
-
-      default: response = "default"}
-
-  } catch (err) {
-    console.error(err)
-  }
-
-  res.send({
-    replies: [{
-      type: 'text',
-      content: response,
-    }],
-    conversation: {
-      memory: { key: 'value' }
-    }
-  })
 })
-
-
-
-// const fs = require('fs')
-// fs.readFile('pythonserver/netzoutput/netzoutput.json', (err, data) => {
-//   if (err) {
-//     console.error(err)
-//     return
-//   }
-//   console.log(data)
-// })
-
-//app.get('/', (req, res) => res.send('Hello world!'))
 
 app.post('/errors', (req, res) => {
   console.log(req.body)

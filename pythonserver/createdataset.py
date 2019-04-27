@@ -55,7 +55,7 @@ model = tf.keras.Sequential([
 # Add a softmax layer with 10 output units:
   layers.Dense(15, activation='softmax')])
 
-  
+
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])

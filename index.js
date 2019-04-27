@@ -344,7 +344,7 @@ app.post('/create_car_prediction', (req, res) => {
 
   const fs = require('fs')
 
-  fs.writeFile('pythonserver/userinput/userinput.json', jsonString, (err) => {
+  fs.writeFile('pythonserver/data/userinput.json', jsonString, (err) => {
     if (err) {
       console.error(err)
       return
@@ -353,11 +353,12 @@ app.post('/create_car_prediction', (req, res) => {
   })
 
   const ps = require('python-shell')
-  ps.PythonShell.run('pythonserver/createdataset.py', null, function (err, results) {
+  ps.PythonShell.run('./pythonserver/createdataset.py', null, function (err, results) {
     if (err) throw err;
     console.log('finished');
     console.log(results);
   });
+
 
   var request = require('request');
   var responseLars;
@@ -376,7 +377,7 @@ app.post('/create_car_prediction', (req, res) => {
               res.send({
                 replies: [{
                   type: 'text',
-                  content: responseLars,
+                  content: 'responseLars',
                 }],
                 conversation: {
                   memory: { key: 'value' }
@@ -388,6 +389,15 @@ app.post('/create_car_prediction', (req, res) => {
 
 
 })
+
+// const fs = require('fs')
+// fs.readFile('pythonserver/netzoutput/netzoutput.json', (err, data) => {
+//   if (err) {
+//     console.error(err)
+//     return
+//   }
+//   console.log(data)
+// })
 
 //app.get('/', (req, res) => res.send('Hello world!'))
 

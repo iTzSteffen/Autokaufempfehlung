@@ -18,7 +18,7 @@ except:
 print(tf.__version__)
 #tf.enable_eager_execution()
 #tf.executing_eagerly()
-URL = '/Users/steffenhofbauer/Documents/GitHub/Autokaufempfehlung/pythonserver/Traininsdaten.csv'
+URL = './pythonserver/Traininsdaten.csv'
 dataframe = pd.read_csv(URL)
 #dataframe.head()
 
@@ -75,13 +75,39 @@ loss, accuracy = model.evaluate(test_ds)
 print("Accuracy", accuracy)
 
 def readFile():
-  with open("./userinput/userinput.json", "r") as read_stock_file:
+  with open("./pythonserver/data/userinput.json", "r") as read_stock_file:
     json_string = json.load(read_stock_file)
     print(json_string)
-  #return(json_string)
-readFile()
+  return(json_string)
 
-if os.path.exists("./userinput/userinput.json"):
-  os.remove("./userinput/userinput.json")
+json_string = readFile()
+
+
+geschlecht = json_string['geschlecht']
+alter =  int(json_string['alter'])
+beziehungsstatus =  json_string['beziehungsstatus']
+hobby =  json_string['hobby']
+budget = int(json_string['budget'])
+beruf =  json_string['beruf']
+grund =  json_string['grund']
+jahreskm =  int(json_string['jahreskm'])
+bildungsstand =  json_string['bildungsstand']
+kinder =  int(json_string['kinder'])
+
+if os.path.exists("./pythonserver/data/userinput.json"):
+  os.remove("./pythonserver/data/userinput.json")
 else:
   print('File does not exists')
+
+data=[[geschlecht],[alter],[beziehungsstatus],[hobby],[budget],[beruf],[grund],[jahreskm],[bildungsstand],[kinder]]
+result = model.predict(data, batch_size=1)
+print(result[0])
+i = 0
+while i < 15:
+  print(result[0][i])
+  if result[0][i] == 1.0:
+    result = {"ergebnis": i}
+    i = 15
+    with open('Netzoutput.json', 'w') as outfile:
+     json.dump(result, outfile)
+  i +=1

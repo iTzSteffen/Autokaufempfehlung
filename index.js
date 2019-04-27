@@ -344,7 +344,7 @@ app.post('/create_car_prediction', (req, res) => {
 
   const fs = require('fs')
 
-  fs.writeFile('data/userinput.txt', jsonString, (err) => {
+  fs.writeFile('data/userinput.json', jsonString, (err) => {
     if (err) {
       console.error(err)
       return

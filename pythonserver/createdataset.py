@@ -18,7 +18,7 @@ except:
 print(tf.__version__)
 #tf.enable_eager_execution()
 #tf.executing_eagerly()
-URL = 'Traininsdaten.csv'
+URL = '/Users/steffenhofbauer/Documents/GitHub/Autokaufempfehlung/pythonserver/Traininsdaten.csv'
 dataframe = pd.read_csv(URL)
 #dataframe.head()
 
@@ -75,13 +75,13 @@ loss, accuracy = model.evaluate(test_ds)
 print("Accuracy", accuracy)
 
 def readFile():
-  with open("./data/userinput.json", "r") as read_stock_file:
+  with open("./userinput/userinput.json", "r") as read_stock_file:
     json_string = json.load(read_stock_file)
     print(json_string)
   #return(json_string)
 readFile()
 
-if os.path.exists("./data/userinput.json"):
-  os.remove("./data/userinput.json")
+if os.path.exists("./userinput/userinput.json"):
+  os.remove("./userinput/userinput.json")
 else:
   print('File does not exists')

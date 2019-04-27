@@ -344,13 +344,20 @@ app.post('/create_car_prediction', (req, res) => {
 
   const fs = require('fs')
 
-  fs.writeFile('pythonserver/data/userinput.json', jsonString, (err) => {
+  fs.writeFile('pythonserver/userinput/userinput.json', jsonString, (err) => {
     if (err) {
       console.error(err)
       return
     }
     //file written successfully
   })
+
+  const ps = require('python-shell')
+  ps.PythonShell.run('pythonserver/createdataset.py', null, function (err, results) {
+    if (err) throw err;
+    console.log('finished');
+    console.log(results);
+  });
 
   var request = require('request');
   var responseLars;

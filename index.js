@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const PythonShell = require('python-shell')
 
 const app = express()
 const port = 5000
@@ -340,12 +341,16 @@ app.post('/create_car_prediction', (req, res) => {
   var jsonString = JSON.stringify(obj);
 
   console.log(obj);
-  var PythonShell = require('python-shell');
 
-  PythonShell.run('/Users/desktop/python server/createdataset.py', function (err) {
-  if (err) throw err;
-  console.log('finished');
-});
+  const fs = require('fs')
+
+  fs.writeFile('data/userinput.txt', jsonString, (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    //file written successfully
+  })
 
   var request = require('request');
   var responseLars;

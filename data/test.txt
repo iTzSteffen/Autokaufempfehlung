@@ -1,0 +1,1 @@
+{"geschlecht":1,"alter":"23","beziehungsstatus":0,"hobby":26,"budget":"40000","beruf":0,"grund":0,"jahreskm":"45000","bildungsstand":2,"kinder":"2"}

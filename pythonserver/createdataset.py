@@ -14,7 +14,7 @@ try:
     import simplejson as json
 except:
     import json
-    
+
 print(tf.__version__)
 #tf.enable_eager_execution()
 #tf.executing_eagerly()
@@ -75,6 +75,6 @@ loss, accuracy = model.evaluate(test_ds)
 print("Accuracy", accuracy)
 
 def readFile():
-  with open("../data/shares.json", "r") as read_stock_file:
+  with open("../data/userinput.json", "r") as read_stock_file:
         json_string = json.load(read_stock_file)
     return(json_string)

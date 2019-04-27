@@ -9,6 +9,12 @@ from tensorflow import feature_column
 from tensorflow import keras
 from tensorflow.keras import layers
 from sklearn.model_selection import train_test_split
+
+try: 
+    import simplejson as json
+except:
+    import json
+    
 print(tf.__version__)
 #tf.enable_eager_execution()
 #tf.executing_eagerly()
@@ -67,3 +73,8 @@ model.fit(train_ds,
 
 loss, accuracy = model.evaluate(test_ds)
 print("Accuracy", accuracy)
+
+def readFile():
+  with open("../data/shares.json", "r") as read_stock_file:
+        json_string = json.load(read_stock_file)
+    return(json_string)

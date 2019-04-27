@@ -75,6 +75,9 @@ loss, accuracy = model.evaluate(test_ds)
 print("Accuracy", accuracy)
 
 def readFile():
-  with open("../data/userinput.json", "r") as read_stock_file:
-        json_string = json.load(read_stock_file)
-  return(json_string)
+  with open("./data/userinput.json", "r") as read_stock_file:
+    json_string = json.load(read_stock_file)
+    print(json_string)
+  #return(json_string)
+  
+readFile()

@@ -6,16 +6,13 @@ const port = 5000
 app.use(bodyParser.json())
 
 app.post('/', (req, res) => {
-  console.log("NLP" + req.body.nlp)
-  console.log("NLP, Conversation" + req.body.nlp.conversation)
-  console.log("NLP, Conversation, Memory" + req.body.nlp.conversation.memory)
-
+  console.log(req.body)
 
 
   res.send({
     replies: [{
       type: 'text',
-      content: 'Roger that',
+      content: 'Warte einen Moment, dein Vorschlag wird erstellt...',
     }],
     conversation: {
       memory: { key: 'value' }
@@ -23,7 +20,7 @@ app.post('/', (req, res) => {
   })
 })
 
-
+app.get('/', (req, res) => res.send('Hello world!'))
 
 app.post('/errors', (req, res) => {
   console.log(req.body)

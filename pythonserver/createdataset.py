@@ -2,7 +2,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import numpy as np
 import pandas as pd
-
+import os
 import tensorflow as tf
 import sklearn as sklearn
 from tensorflow import feature_column
@@ -10,7 +10,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from sklearn.model_selection import train_test_split
 
-try: 
+try:
     import simplejson as json
 except:
     import json
@@ -79,5 +79,9 @@ def readFile():
     json_string = json.load(read_stock_file)
     print(json_string)
   #return(json_string)
-  
 readFile()
+
+if os.path.exists("./data/userinput.json"):
+  os.remove("./data/userinput.json")
+else:
+  print('File does not exists')

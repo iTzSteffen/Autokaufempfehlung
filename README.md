@@ -12,3 +12,17 @@ Nach der Installation wird der ngrok-Server auf Mac durch die Eingabe ./ngrok ht
 
 Nach den Installationen wird wird der node.js-Server mit folgender Eingabe gestartet: 
 node index.js
+
+Python (Download unter: https://www.python.org/downloads/)
+
+Damit das neuronale Netz funktionieren kann, muss Python 3.6 installiert werden. Danach müssen die folgenden Python Libarys installiert werden:
+- numpy
+- pandas
+- tensorflow alpha 2.0.0
+- sklearn
+
+Die Installation dieser erfolgt am Besten mittels pip durch den Befehl “pip install” + den Namen der Libary. z.B: “pip install numpy”
+
+- Es kann passieren, dass das neuronales Netz trotzdem nicht funktioniert, dann gibt es zwei wahrscheinliche Ursachen dafür
+Microsoft Visual C++ 2015 Redistributable Update 3 fehlt auf dem Rechner (Download unter: https://www.microsoft.com/de-de/download/details.aspx?id=52685)
+- Die Version der Protobuf Libary ist falsch. Diese kann mittels “pip install protobuf==3.6.0” geändert werden

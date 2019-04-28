@@ -24,7 +24,6 @@ app.post('/create_car_prediction', (req, res) => {
   obj.alter = req.body.conversation.memory.alter.value;
   obj.beziehungsstatus = req.body.conversation.memory.beziehungsstatus.value;
   obj.hobby = req.body.conversation.memory.hobby.value;
-  ...
   obj.budget = req.body.conversation.memory.budget.value;
   obj.beruf = req.body.conversation.memory.beruf.value;
   obj.grund = req.body.conversation.memory.grund.value;
